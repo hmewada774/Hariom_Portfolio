@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 

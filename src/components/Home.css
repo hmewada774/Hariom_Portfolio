@@ -4,7 +4,8 @@
   align-items: center;
   min-height: 100vh;
   position: relative;
-  color: var(--text); /* theme aware */
+  color: var(--text);
+  /* theme aware */
   overflow: hidden;
   padding-left: 10%;
   transition: all 0.3s ease;
@@ -16,7 +17,8 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: var(--hero-bg); /* set image via CSS variable */
+  background-image: var(--hero-bg);
+  /* set image via CSS variable */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,7 +47,7 @@
 
 .hero-name-line {
   display: block;
-  font-size: 4.5rem; 
+  font-size: 4.5rem;
   margin-top: 0;
   font-weight: 500;
 }
@@ -61,6 +63,7 @@
 .gradient-text {
   background: linear-gradient(to right, #8e2de2, #4a00e0, #ff0080);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -71,9 +74,11 @@
 }
 
 .hero-intro.typing-effect {
-  color: var(--text); /* bright cyan, looks good on dark and light backgrounds */
+  color: var(--text);
+  /* bright cyan, looks good on dark and light backgrounds */
   font-weight: 500;
-  text-shadow: 0 0 8px rgba(0, 245, 255, 0.7); /* subtle glow for highlight */
+  text-shadow: 0 0 8px rgba(0, 245, 255, 0.7);
+  /* subtle glow for highlight */
 }
 
 .hero-roles {
@@ -95,9 +100,12 @@
 
 /* HIGHLIGHTED BORDER ON HOVER */
 .role-tag:hover {
-  border-color: #ff3f73; /* highlighted pink border */
-  box-shadow: 0 0 10px #ff3f73; /* glow effect */
-  color: var(--text); /* keep text visible */
+  border-color: #ff3f73;
+  /* highlighted pink border */
+  box-shadow: 0 0 10px #ff3f73;
+  /* glow effect */
+  color: var(--text);
+  /* keep text visible */
 }
 
 .hero-info {
@@ -275,10 +283,11 @@
   }
 }
 
-.root{
+.root {
   --cd: #000000;
 }
-.dark{
+
+.dark {
   --cd: #ffffff;
 }
 
@@ -315,8 +324,9 @@
   --text-muted2: #0905ff;
   --accent: #12f7ff;
   --accent-hover: #ff3f73;
-  --hero-bg: url('./Hero.jpg'); /* dark theme bg */
-  --line : #ffffff;
+  --hero-bg: url('/hero2.png');
+  /* dark theme bg */
+  --line: #ffffff;
 }
 
 /* LIGHT THEME */
@@ -327,6 +337,7 @@
   --text-muted2: #ff0000;
   --accent: #00cfff;
   --accent-hover: #ff3f73;
-  --hero-bg: url('./j.jpg'); /* light theme bg */
-  --line : #000000;
+  --hero-bg: url('/j2.png');
+  /* light theme bg */
+  --line: #000000;
 }
