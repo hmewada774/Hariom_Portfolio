@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Download, GraduationCap, Laptop, Layers } from "lucide-react";
 import "./Resume.css";
 
