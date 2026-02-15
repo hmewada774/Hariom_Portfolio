@@ -1,0 +1,158 @@
+/* WRAPPER */
+.intro-video-wrapper {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999999;
+  overflow: hidden;
+}
+
+/* BACKGROUND VIDEO */
+.intro-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35);
+}
+
+/* TITLE */
+.intro-title {
+  color: white;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(255,255,255,0.7);
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+}
+
+/* PROGRESS WRAPPER (DESKTOP) */
+.intro-progress {
+  position: absolute;
+  bottom: 55px; /* anchor near bottom on large screens */
+  width: 60%;
+  max-width: 520px;
+  text-align: center;
+  z-index: 5;
+}
+.intro-progress {
+  position: absolute;
+  bottom: 120px; /* was too low, pulling it UP */
+
+
+/* PROGRESS TRACK (background) */
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* PROGRESS BAR (animated fill + shimmer) */
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg,#22d3ee,#0ea5e9,#2563eb);
+  box-shadow: 0 0 12px rgba(56,189,248,0.6);
+  transition: width 0.06s linear;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ SHIMMER EFFECT */
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  animation: shimmer 1.6s infinite ease-out;
+}
+
+@keyframes shimmer {
+  from { left: -40%; }
+  to { left: 100%; }
+}
+
+/* ICON UNDER BAR */
+.progress-icon {
+  margin-top: 4px;
+  color: #aef6ff;
+  filter: drop-shadow(0 0 6px #00eaff);
+  font-size: 28px;
+}
+
+/* LOADING TEXT */
+.progress-text {
+  margin-top: 2px;
+  font-size: 0.9rem;
+  color: #dffcff;
+  letter-spacing: 1.3px;
+  opacity: 0.85;
+}
+
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  .intro-video-wrapper {
+    justify-content: center;   /* center vertically */
+  }
+
+  .intro-title {
+    font-size: clamp(2.2rem, 9vw, 4rem);
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  /* Make progress sit under title, centered, not stuck to bottom */
+  .intro-progress {
+    position: static;          /* remove absolute positioning */
+    bottom: auto;
+    margin-top: 20px;
+    width: 85%;
+    max-width: 380px;
+  }
+
+  .progress-icon {
+    font-size: 24px;
+  }
+
+  .progress-text {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 380px) {
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-progress {
+    width: 90%;
+    margin-top: 16px;
+  }
+
+  .progress-track {
+    height: 6px;
+  }
+
+  .progress-text {
+    font-size: 0.75rem;
+  }
+}

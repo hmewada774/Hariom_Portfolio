@@ -1,0 +1,17 @@
+services:
+  - type: static
+    name: hariom-portfolio
+    env: static
+    buildCommand: npm install && npm run build
+    publishPath: build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_EMAILJS_SERVICE_ID
+        sync: false
+      - key: VITE_EMAILJS_TEMPLATE_ID
+        sync: false
+      - key: VITE_EMAILJS_PUBLIC_KEY
+        sync: false

@@ -1,0 +1,332 @@
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  color: var(--text); /* theme aware */
+  overflow: hidden;
+  padding-left: 10%;
+  transition: all 0.3s ease;
+}
+
+/* BACKGROUND IMAGE */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--hero-bg); /* set image via CSS variable */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  filter: brightness(1);
+  transition: all 0.3s ease;
+}
+
+/* LEFT CONTENT */
+.hero-content {
+  margin-top: 120px;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* HEADINGS */
+.hero-name {
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.hero-name-line {
+  display: block;
+  font-size: 4.5rem; 
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.hero-line {
+  width: 180px;
+  height: 2px;
+  background-color: var(--line);
+  margin-top: 8px;
+  border-radius: 1px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #8e2de2, #4a00e0, #ff0080);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-intro {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  min-height: 2em;
+}
+
+.hero-intro.typing-effect {
+  color: var(--text); /* bright cyan, looks good on dark and light backgrounds */
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(0, 245, 255, 0.7); /* subtle glow for highlight */
+}
+
+.hero-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.role-tag {
+  padding: 6px 14px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgb(31, 52, 137);
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* HIGHLIGHTED BORDER ON HOVER */
+.role-tag:hover {
+  border-color: #ff3f73; /* highlighted pink border */
+  box-shadow: 0 0 10px #ff3f73; /* glow effect */
+  color: var(--text); /* keep text visible */
+}
+
+.hero-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: var(--accent);
+  padding: 12px 16px;
+  border-radius: 12px;
+  min-width: 140px;
+  transition: 0.3s ease;
+}
+
+.info-card h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgb(33, 161, 178);
+}
+
+.info-card p {
+  margin: 2px 0 0 0;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.social-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-group h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  filter: brightness(1);
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+.hero-arrow {
+  margin-top: 20px;
+  color: var(--cd);
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 700px;
+}
+
+/* ================= MOBILE & TABLET RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .hero {
+    padding-left: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-top: 100px;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+  }
+
+  .hero-name-line {
+    font-size: 3.5rem;
+  }
+
+  .hero-line {
+    margin: 0.8rem auto 0 auto;
+  }
+
+  .hero-roles {
+    justify-content: center;
+  }
+
+  .hero-info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-socials {
+    margin-left: 0;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .hero-arrow {
+    margin-left: 0;
+  }
+}
+
+
+/* SMALL DEVICES (Under 600px) */
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: auto;
+    padding: 4rem 1.2rem;
+  }
+
+  .hero-content {
+    margin-top: 60px;
+    gap: 14px;
+  }
+
+  .hero-name {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-name-line {
+    font-size: 2.8rem;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+    min-height: auto;
+  }
+
+  .role-tag {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-socials {
+    gap: 1.5rem;
+    margin-top: 35px;
+  }
+
+  .hero-arrow {
+    margin-top: 30px;
+  }
+}
+
+.root{
+  --cd: #000000;
+}
+.dark{
+  --cd: #ffffff;
+}
+
+/* EXTRA SMALL DEVICES (Under 430px) */
+@media (max-width: 430px) {
+  .hero-name {
+    font-size: 1.9rem;
+  }
+
+  .hero-name-line {
+    font-size: 2.3rem;
+  }
+
+  .hero-intro {
+    font-size: 0.9rem;
+  }
+
+  .role-tag {
+    font-size: 0.75rem;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* THEME VARIABLES (global, on :root) */
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --text: #fff;
+  --text-muted: #4683f4;
+  --text-muted2: #0905ff;
+  --accent: #12f7ff;
+  --accent-hover: #ff3f73;
+  --hero-bg: url('./Hero.jpg'); /* dark theme bg */
+  --line : #ffffff;
+}
+
+/* LIGHT THEME */
+[data-theme="light"] {
+  --bg: #f8f9fa;
+  --text: #000000;
+  --text-muted: #000000;
+  --text-muted2: #ff0000;
+  --accent: #00cfff;
+  --accent-hover: #ff3f73;
+  --hero-bg: url('./j.jpg'); /* light theme bg */
+  --line : #000000;
+}
