@@ -20,7 +20,7 @@ export default function IntroVideo({ onFinish }: { onFinish?: () => void }) {
       setHide(true);
       document.body.style.overflow = "auto";
       onFinish?.();
-    }, 3000);
+    }, 2500);
 
     return () => {
       clearInterval(interval);
@@ -39,7 +39,7 @@ export default function IntroVideo({ onFinish }: { onFinish?: () => void }) {
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
-        transition={{ delay: 4.7, duration: 0.9 }}
+        transition={{ delay: 2.5, duration: 0.5 }}
         className="intro-video-wrapper"
       >
         <video autoPlay muted playsInline className="intro-video">

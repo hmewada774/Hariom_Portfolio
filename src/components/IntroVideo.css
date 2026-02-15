@@ -27,7 +27,7 @@
   font-weight: 700;
   letter-spacing: 6px;
   text-transform: uppercase;
-  text-shadow: 0 0 30px rgba(255,255,255,0.7);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
   z-index: 5;
   margin: 0;
   padding: 0;
@@ -36,22 +36,20 @@
 /* PROGRESS WRAPPER (DESKTOP) */
 .intro-progress {
   position: absolute;
-  bottom: 55px; /* anchor near bottom on large screens */
+  bottom: 80px;
+  /* anchor near bottom on large screens */
   width: 60%;
   max-width: 520px;
   text-align: center;
   z-index: 5;
 }
-.intro-progress {
-  position: absolute;
-  bottom: 120px; /* was too low, pulling it UP */
 
 
 /* PROGRESS TRACK (background) */
 .progress-track {
   width: 100%;
   height: 8px;
-  background: rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(6px);
   border-radius: 50px;
   overflow: hidden;
@@ -60,8 +58,8 @@
 /* PROGRESS BAR (animated fill + shimmer) */
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg,#22d3ee,#0ea5e9,#2563eb);
-  box-shadow: 0 0 12px rgba(56,189,248,0.6);
+  background: linear-gradient(90deg, #22d3ee, #0ea5e9, #2563eb);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
   transition: width 0.06s linear;
   border-radius: 50px;
   position: relative;
@@ -76,18 +74,21 @@
   left: -40%;
   width: 40%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255,255,255,0.7),
-    transparent
-  );
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.7),
+      transparent);
   animation: shimmer 1.6s infinite ease-out;
 }
 
 @keyframes shimmer {
-  from { left: -40%; }
-  to { left: 100%; }
+  from {
+    left: -40%;
+  }
+
+  to {
+    left: 100%;
+  }
 }
 
 /* ICON UNDER BAR */
@@ -110,7 +111,8 @@
 /* 📱 MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
   .intro-video-wrapper {
-    justify-content: center;   /* center vertically */
+    justify-content: center;
+    /* center vertically */
   }
 
   .intro-title {
@@ -121,7 +123,8 @@
 
   /* Make progress sit under title, centered, not stuck to bottom */
   .intro-progress {
-    position: static;          /* remove absolute positioning */
+    position: static;
+    /* remove absolute positioning */
     bottom: auto;
     margin-top: 20px;
     width: 85%;

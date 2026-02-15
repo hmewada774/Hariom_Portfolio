@@ -17,8 +17,15 @@ import { ThemeToggle } from "./components/ThemeToggle";
 
 export default function App() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
-  const [introDone, setIntroDone] = useState(false);
-  const [openGalleryPage, setOpenGalleryPage] = useState(false); // <--- NEW STATE
+  const [introDone, setIntroDone] = useState(() => {
+    return sessionStorage.getItem("introSeen") === "true";
+  });
+  const [openGalleryPage, setOpenGalleryPage] = useState(false);
+
+  const handleIntroFinish = () => {
+    sessionStorage.setItem("introSeen", "true");
+    setIntroDone(true);
+  };
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
@@ -44,27 +51,22 @@ export default function App() {
 
       <main>
         {/* Show intro video first */}
-        {!introDone && <IntroVideo onFinish={() => setIntroDone(true)} />}
+        {!introDone && <IntroVideo onFinish={handleIntroFinish} />}
 
         {/* AFTER INTRO */}
         {introDone && (
           <>
             {/* IF GALLERY PAGE IS OPEN — SHOW ONLY THAT */}
             {openGalleryPage ? (
-              <GalleryPage onBack={() => setOpenGalleryPage(false)} />
+              <GalleryPage theme={theme} onBack={() => setOpenGalleryPage(false)} />
             ) : (
               <>
                 {/* OTHERWISE SHOW MAIN WEBSITE */}
                 <Home theme={theme} />
-
                 <About />
-
                 <Projects theme={theme} />
-
                 {/* PASS FUNCTION TO GALLERY BUTTON */}
                 <Gallery theme={theme} onOpenGalleryPage={() => setOpenGalleryPage(true)} />
-
-
                 <Skills theme={theme} />
                 <Resume theme={theme} />
                 <Certificates theme={theme} />

@@ -29,8 +29,8 @@ export function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-3 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-            ? 'bg-white/90 dark:bg-black/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/10'
-            : 'bg-transparent'
+          ? 'bg-white/90 dark:bg-black/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/10'
+          : 'bg-transparent'
           }`}
       >
         <div className="relative w-full px-6 py-4 flex items-center justify-center">
@@ -42,16 +42,16 @@ export function Navbar() {
             className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-3"
           >
             {/* KD Logo (smaller circle) */}
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-left shrink-0">
-              <span className="text-white font-bold text-lg md:text-xl">HM</span>
+            <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shrink-0">
+              <span className="text-white font-bold text-base md:text-xl">HM</span>
             </div>
 
             {/* Name + Subtitle */}
             <div className="flex flex-col">
-              <span className="text-gray-900 dark:text-white font-semibold text-base md:text-lg">
+              <span className="text-gray-900 dark:text-white font-semibold text-xs md:text-lg">
                 Hariom Mewada
               </span>
-              <span className="text-blue-500 dark:text-purple-100 font-medium text-sm md:text-base">
+              <span className="text-blue-500 dark:text-purple-100 font-medium text-[10px] md:text-base leading-tight">
                 Cyber Security • Developer
               </span>
             </div>
