@@ -7,7 +7,7 @@ using Figma.
 This portfolio showcases my projects, skills, research work, and journey
 as a Developer and Cyber Security Enthusiast.
 
-Live Website: https://hariom-mewada.netlify.app/
+Live Website: https://hariom-portfolio.onrender.com/
 
   ----------
   FEATURES
@@ -45,7 +45,7 @@ Deployment: Vercel Netlify
 To run this project locally:
 
 1.  Clone the repository: git clone
-    https://github.com/hmewada774/portfolio.git
+    https://github.com/hmewada774/Hariom_Portfolio
 
 2.  Navigate to project directory: cd Hariom-portfolio
 
@@ -69,8 +69,7 @@ Email: hmewada774@gmail.com
 
 This portfolio is deployed on:
 
--   Vercel
--   Netlify
+-   Render
 
 Every push to the main branch automatically triggers continuous
 integration and deployment.
