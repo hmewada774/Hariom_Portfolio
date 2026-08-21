@@ -4,6 +4,7 @@ import "./Certificates.css";
 
 const CERTS = {
   tech: [
+    { title: "Internship Certificate Of Completion", org: "State Cyber Cell Bhopal", date: "July 2026", img: "/certss/3.Intern cert.jpeg" },
     { title: "Google IT Support Certificate", org: "Google", date: "2025", img: "/certss/googleIt.png" },
     { title: "Internship Offer Letter - The Red User", org: "The Red User", date: "2025", img: "/certss/RedUse.png" },
     { title: "Internship Completion Certificate - The Red User", org: "The Red User", date: "2025", img: "/certss/RedUseLater.png" },
@@ -22,6 +23,10 @@ const CERTS = {
     { title: "National Finance Literacy Quiz", org: "NISM", date: "2025", img: "/certss/NISM.png" },
     { title: "Blockchain and Applications", org: "NPTEL", date: "2025", img: "/certss/NPTEL.png" },
     { title: "OWASP Shell Zen CTF", org: "VIT Bhopal", date: "2025", img: "/certss/owsp vit ctf.png" },
+    { title: "AMD Slingshot Campus Day", org: "AMD", date: "2026", img: "/certss/1.AMD Slingshot.png" },
+    { title: "Internship Certificate at Digital Investigation", org: "Digital Investigation", date: "2026", img: "/certss/2.Digital Investigation.png" },
+    { title: "Ocean Science Viksit Bharat ", org: "Viksit Bharat", date: "2026", img: "/certss/4.MyBharat_Quiz_Certificate (1).png" },
+    { title: "Nation Flag Of India Quiz", org: "Viksit Bharat", date: "2026", img: "/certss/5.MyBharat_Quiz_Certificate.png" },
 
   ],
   other: [
